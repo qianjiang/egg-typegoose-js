@@ -6,5 +6,9 @@
  * @property {String} SOME_KEY - some description
  */
 exports.typegoose = {
+  url: '',
+  options: {},
+  filetype: 'js',
+  baseDir: 'app/model'
 
 };

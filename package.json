@@ -37,11 +37,9 @@
     "autod": "autod"
   },
   "files": [
-    "app.js",
-    "agent.js",
     "config",
-    "lib",
-    "app"
+    "app.js",
+    "index.d.ts"
   ],
   "ci": {
     "version": "8, 10"

@@ -1,6 +1,8 @@
 'use strict';
 
 const mock = require('egg-mock');
+const globby = require('globby');
+const assert = require('assert');
 
 describe('test/typegoose-js.test.js', () => {
   let app;
@@ -17,7 +19,14 @@ describe('test/typegoose-js.test.js', () => {
   it('should GET /', () => {
     return app.httpRequest()
       .get('/')
-      .expect('hi, typegooseJs')
+      .expect('hi, typegoose')
       .expect(200);
+  });
+
+  it('get model file', async () => {
+    const paths = await globby('*.js');
+  
+    console.log(paths);
+    assert(paths)
   });
 });
